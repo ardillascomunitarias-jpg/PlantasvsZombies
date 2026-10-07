@@ -7,6 +7,8 @@ public class DetectTarget : MonoBehaviour
     private float range;
     [SerializeField]
     private float rayHeighOffset = 0.5f;
+    [SerializeField]
+    private LayerMask targetLayer;
     private bool isActive;
     public event System.Action<Health> OnTargetDetected;
     public void SetRange(float newRange)
@@ -20,7 +22,8 @@ public class DetectTarget : MonoBehaviour
     private void Update()
     {
         if (!isActive) return;
-        if (Physics.Raycast(transform.position + Vector3.up * rayHeighOffset, transform.forward, out RaycastHit hit, range))
+
+        if (Physics.Raycast(transform.position + Vector3.up * rayHeighOffset, transform.forward, out RaycastHit hit, range, targetLayer))
         {
             if (hit.collider.CompareTag(targetTag))
             {
