@@ -17,7 +17,7 @@ MonoBehaviour:
   deathSound: Peashooter_Die
   maxHealth: 200
   damage: 25
-  range: 20
+  range: 25
   attackParticles: {fileID: 8627881993750549678, guid: d885a11c756b54140b4901c67ca5a60a, type: 3}
   bulletPrefab: {fileID: 2684996914122972571, guid: e5153164c3d097c45ad518c2fb8b46e4, type: 3}
   shootTime: 1
