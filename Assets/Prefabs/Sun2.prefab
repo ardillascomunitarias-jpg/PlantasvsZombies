@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6683cb266ba84af4f8a7ea9cfeade698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sun
-  value: 1
+  value: 50
   sunParticles: {fileID: 4602884566761715096, guid: eb15d627435723941980480c826de3d3, type: 3}
   collectSound: Sun_Collected
   duration: 4
@@ -154,6 +154,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 59a8b22130756be4dabab7a00b40b9a3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7cbf5795e87ff3f46b7518e1a70bf1ed, type: 2}
     - target: {fileID: 919132149155446097, guid: 59a8b22130756be4dabab7a00b40b9a3, type: 3}
       propertyPath: m_Name
       value: sun 1
