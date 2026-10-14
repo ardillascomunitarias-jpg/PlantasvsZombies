@@ -17,11 +17,16 @@ public class Peashooter : Character
         detectTarget = GetComponent<DetectTarget>();
         detectTarget.SetRange(shooterPlantData.range);
     }
-    private void OnEnable()
+    protected override void OnEnable()
     {
+         currentTarget = null;
+         base.OnEnable();
         //SoundManager.instance.Play(shooterPlantData.appearSound);
-        health.Initialize();
-        currentTarget = null;
+        health.Initialize();      
+    }
+    public override void Initialize()
+    {
+        base.Initialize();
         canAttack = true;
         ActivateTargetDetection(true);
     }
