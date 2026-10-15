@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+[RequireComponent(typeof(Blink))]
+[RequireComponent(typeof(Health))]
  
 public class Character : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class Character : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0f, initialRotationY, 0f);
         characterCollider.enabled = false;
+        health.Initialize();
         Initialize();
     }
     public virtual void Initialize()

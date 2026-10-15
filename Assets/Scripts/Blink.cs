@@ -4,7 +4,7 @@ using System.Collections.Generic;
  
 public class Blink : MonoBehaviour
 {
-    private List<Renderer> renderers;
+    private List<Renderer> renderers = new List<Renderer>();
     [SerializeField]
     private float blinkInterval = 0.2f;
     private void Awake()
