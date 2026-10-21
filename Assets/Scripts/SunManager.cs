@@ -23,5 +23,14 @@ public class SunManager : MonoBehaviour
         currentSun += amount;
         UpdateSunText();
     }
+    public bool HasEnoughSun(int amount)
+    {
+        return currentSun >= amount;
+    }
+    public void SpeendSun(int amount)
+    {
+        currentSun -= amount;
+        UpdateSunText();
+    }
 
 }

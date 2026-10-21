@@ -2,37 +2,31 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
  
-public class Flower : Character
+public class Flower : Plant
 {
     [SerializeField]
-    private Collider zoneDetector;
+    private FlowerData flowerData;
     [SerializeField]
-    private FlowerData flowerData;    
+    private FlowerZoneDetector zoneDetector;    
     private List<Transform> zones = new List<Transform>();
     protected override void Awake()
     {
         base.Awake();
         health.SetMaxHealth(flowerData.maxHealth);
+        zoneDetector.Flower = this;
     }
     protected override void OnEnable()
-    {
-        zoneDetector.enabled = false;
+    {      
+        zoneDetector.DeactivateDetector();
         zones.Clear();
-         base.OnEnable();
+        base.OnEnable();
         //SoundManager.instance.Play(flowerData.appearSound);
     }
     public override void Initialize()
     {
         base.Initialize();
-        zoneDetector.enabled = true;
+        zoneDetector.ActivateDetector();
         StartCoroutine(GenerateSun());
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Zone"))
-        {
-            zones.Add(other.transform);
-        }
     }
     private IEnumerator GenerateSun()
     {
@@ -50,7 +44,7 @@ public class Flower : Character
                 SoundManager.instance.Play(flowerData.attackSound);
                 characterAnimator.Play("Attack", 0, 0f);
                 PoolManager.Instance.GetObject(flowerData.sunParticlePrefab,
-                   transform.position);
+                    transform.position);
             }
         }
     }
@@ -58,8 +52,13 @@ public class Flower : Character
     {
         base.Die();
         SoundManager.instance.Play(flowerData.deathSound);
-        zoneDetector.enabled = false;
+        zoneDetector.DeactivateDetector();
     }
- 
- 
+    public void AddZone(Transform zone)
+    {
+        if (!zones.Contains(zone))
+        {
+            zones.Add(zone);
+        }
+    }
 }
