@@ -27,7 +27,7 @@ public class SunManager : MonoBehaviour
     {
         return currentSun >= amount;
     }
-    public void SpeendSun(int amount)
+    public void SpendSun(int amount)
     {
         currentSun -= amount;
         UpdateSunText();
