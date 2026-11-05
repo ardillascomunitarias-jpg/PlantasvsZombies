@@ -124,7 +124,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   m_EvaluateTransitionsOnStart: 1
---- !u!1102 &3433764045400844678
+--- !u!1102 &5364364571596622200
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -144,7 +144,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: fc3fccc7c3914a0439e2922994c7770d, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 8c0bd3d49c10da8478f86167eb7f2df5, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -167,13 +167,13 @@ AnimatorStateMachine:
     m_Position: {x: 580, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1219005412551127289}
-    m_Position: {x: 540, y: 130, z: 0}
+    m_Position: {x: 580, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3520917509529638421}
     m_Position: {x: 280, y: -50, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 3433764045400844678}
-    m_Position: {x: 370, y: 190, z: 0}
+    m_State: {fileID: 5364364571596622200}
+    m_Position: {x: 417.5, y: 172.5, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
