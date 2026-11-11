@@ -28,6 +28,8 @@ public class EnemiesManager : MonoBehaviour
         Zombie zombie = PoolManager.Instance.GetObject(enemy.enemyPrefab,
            lane.LaneStart.position).GetComponent<Zombie>();
         zombie.onDie += EnemyDied; 
+        zombie.onWin += EnemyWon; 
+        currentEnemies.Add(zombie);
         zombie.Initialize();   
     }
     private void EnemyDied(Zombie zombie)
