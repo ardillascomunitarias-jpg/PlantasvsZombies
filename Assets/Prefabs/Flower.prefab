@@ -210,9 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6aa8a4e108b1ce42af2ae99cd510360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Flower
-  characterAnimator: {fileID: 0}
+  characterAnimator: {fileID: 1484431700169217383}
   initialRotationY: 0
   blinkDuration: 3
+  price: 25
   flowerData: {fileID: 11400000, guid: faca1aa88afe5824d970633d3ea6d4ca, type: 2}
   zoneDetector: {fileID: 3688780944267121689}
 --- !u!1001 &3126380035790310973

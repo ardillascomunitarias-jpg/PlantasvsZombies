@@ -43,4 +43,14 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 5165498930169638107, guid: 3dbaf5fa05a3a3f4bb912a58c7bb09ec, type: 3}
       spawnTime: 3
       laneIndex: 4
+  - enemies:
+    - enemyPrefab: {fileID: 1203753378982513985, guid: df1bb2a9c4821064ba4b7afc90f1a0d9, type: 3}
+      spawnTime: 1
+      laneIndex: 1
+    - enemyPrefab: {fileID: 1203753378982513985, guid: df1bb2a9c4821064ba4b7afc90f1a0d9, type: 3}
+      spawnTime: 2
+      laneIndex: 2
+    - enemyPrefab: {fileID: 5165498930169638107, guid: 3dbaf5fa05a3a3f4bb912a58c7bb09ec, type: 3}
+      spawnTime: 3
+      laneIndex: 5
   currentIndex: 0

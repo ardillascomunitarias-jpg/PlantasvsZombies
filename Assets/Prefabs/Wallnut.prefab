@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1636950029023034724}
   - component: {fileID: 274949797341522349}
   - component: {fileID: 7200588827365351655}
+  - component: {fileID: 3341043575967573330}
   m_Layer: 7
   m_Name: Wallnut
   m_TagString: Plant
@@ -55,8 +56,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.98007536, y: 1, z: 1.02388}
-  m_Center: {x: -0.009974718, y: 0, z: -0.029913902}
+  m_Size: {x: 1.0820717, y: 1.3322225, z: 1.02388}
+  m_Center: {x: 0.041023433, y: 0.82102895, z: -0.029913902}
 --- !u!114 &274949797341522349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,8 +102,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wallnut
   characterAnimator: {fileID: 3753394190397767061}
-  initialRotationY: 0
+  initialRotationY: 90
+  blinkDuration: 3
+  price: 50
   maxHealth: 100
+--- !u!114 &3341043575967573330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7587264018544249560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14798318290d08846809051e908d2c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Blink
+  blinkInterval: 0.2
 --- !u!1001 &1545396489322024861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -117,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef7de510829808d44a4ed9bc7edb6653, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.587
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef7de510829808d44a4ed9bc7edb6653, type: 3}
       propertyPath: m_LocalPosition.z
@@ -281,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6921789637597667562, guid: 4a7d4ee44ac9781499a7be1f3beed2fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.96
+      value: 1.654
       objectReference: {fileID: 0}
     - target: {fileID: 6921789637597667562, guid: 4a7d4ee44ac9781499a7be1f3beed2fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
