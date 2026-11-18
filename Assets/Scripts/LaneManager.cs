@@ -1,5 +1,5 @@
 using UnityEngine;
-
+ 
 public class LaneManager : MonoBehaviour
 {
     [SerializeField]
@@ -13,3 +13,4 @@ public class LaneManager : MonoBehaviour
         return lanes[index];
     }
 }
+ 

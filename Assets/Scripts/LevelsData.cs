@@ -1,5 +1,5 @@
 using UnityEngine;
-
+ 
 [CreateAssetMenu(fileName = "LevelsData", menuName = "Scriptable Objects/LevelsData")]
 public class LevelsData : ScriptableObject
 {
@@ -9,9 +9,11 @@ public class LevelsData : ScriptableObject
     public int CurrentIndex { get => currentIndex; set => currentIndex = value; }
     public LevelData CurrentLevel => levels[currentIndex];
 }
-
+ 
 [System.Serializable]
 public class LevelData
 {
     public EnemyData[] enemies;
+    public PlantCardData[] cardLevels;
 }
+ 

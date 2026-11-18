@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
-
+ 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField]
@@ -8,16 +8,21 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private EnemiesManager enemiesManager;
     [SerializeField]
+    private CardsManager cardsManager;
+    [SerializeField]
     private UnityEvent onLevelComplete;
     [SerializeField]
     private LevelsData levelsData;
     public void Initialize()
     {
         onLevelStart?.Invoke();
-        enemiesManager.SpawnEnemies(levelsData.CurrentLevel.enemies);
+        LevelData currentLevel = levelsData.CurrentLevel;
+        enemiesManager.SpawnEnemies(currentLevel.enemies);
+        cardsManager.SetCards(currentLevel.cardLevels);
     }
-    public void CompleteLevel()
+    public void CompletLevel()
     {
         onLevelComplete?.Invoke();
     }
 }
+ 
