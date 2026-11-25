@@ -19,6 +19,6 @@ MonoBehaviour:
   hitParticles: {fileID: 74824926909509899, guid: 37ae3e666e9cc654fae7d03d55ca6b38, type: 3}
   damage: 25
   range: 5
-  attackRate: 1
+  attackRate: 2
   punchSound: Gritiyo2
   punchTime: 1

@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-
 public class Bonk : AttackingPlant
 {
     [SerializeField]
@@ -32,12 +31,14 @@ public class Bonk : AttackingPlant
             SoundManager.instance.Play(bonkData.punchSound);
             target.TakeDamage(bonkData.damage);
             PoolManager.Instance.GetObject(bonkData.hitParticles,
-                 target.transform.position);
-            if (target.IsDead)
+                target.transform.position);
+                if (target.IsDead)
             {
                 ClearTarget();
             }
         }
+        yield return new WaitForSeconds(bonkData.attackRate);
+        SetCanAttack(true);
     }
     public override void Die()
     {
@@ -45,3 +46,5 @@ public class Bonk : AttackingPlant
         base.Die();
     }
 }
+ 
+ 

@@ -7,13 +7,16 @@ public class PlantCard : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField]
     private TextMeshProUGUI priceText;
-     private int price => plantPrefab.GetComponent<Plant>().Price;
+    private int price => plantPrefab.GetComponent<Plant>().Price;
     [SerializeField]
     private GameObject plantPrefab;
     [SerializeField]
     private SunManager sunManager;
     [SerializeField]
     private UnityEvent<Transform> onPlantBought;
+    [SerializeField]
+    private PlantCardType plantCardType;
+    public PlantCardType PlantCardType => plantCardType;
     private void Awake()
     {
         priceText.text = price.ToString();
@@ -32,4 +35,13 @@ public class PlantCard : MonoBehaviour, IPointerDownHandler
         TryToBuyPlant();
     }
 }
+public enum PlantCardType
+{
+    Peashooter,
+    Flower,
+    Wallnut,
+    PlasmaPeashooter,
+}
+ 
+ 
  
